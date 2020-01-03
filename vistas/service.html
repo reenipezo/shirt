@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/img/favicon-16x16.png" type="image/png">
+    <title>Happy Shirt | Servicios</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <link rel="stylesheet" href="css/arriba.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/mburakerman/prognroll/master/src/prognroll.js"></script>
+    <script>
+        function vermas(id) {
+            if (id == "mas") {
+                document.getElementById("desplegar").style.display = "block";
+                document.getElementById("mas").style.display = "none";
+            }
+            else {
+                document.getElementById("desplegar").style.display = "none";
+                document.getElementById("mas").style.display = "inline";
+            }
+        }
+    </script>
+    <script language="JavaScript">
+        var TRange = null
+
+        function busca(str) {
+            if (parseInt(navigator.appVersion) < 4) return;
+            var strFound;
+            if (window.find) {
+
+                strFound = self.find(str);
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                if (TRange != null) {
+                    TRange.collapse(false)
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+                if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange()
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+            }
+            else if (navigator.appName == "Opera") {
+                alert("Opera no soporta busqueda")
+                return;
+            }
+            if (!strFound) alert("La palabra  '" + str + "' no fue Encontrada")
+            return;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area" id="header">
+        <div class="top_menu row m0">
+            <div class="container">
+                <div class="float-left">
+                    <a class="dn_btn" href="tel: +51944028451"><i class="ti-mobile"></i>944 028 451</a>
+                    <span class="dn_btn"> <i class="ti-location-pin"></i>Av. Tomas Marzano, Santiago de Surco</span>
+                </div>
+                <div class="float-right">
+                    <span class="follow_us">Siguenos: </span>
+                    <ul class="list header_social">
+                        <li><a href="#"><i class="ti-facebook"></i></a></li>
+                        <li><a href="#"><i class="ti-instagram"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="../index.html"><img src="img/img/logo.jpg" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about-us.html">Sobre Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../Sony/vista/index.php">Nuestros Productos</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-button">
+                        <ul>
+                            <li class="shop-icon"><a href="../Sony/vista/index.php"><i class="ti-shopping-cart-full"></i><span>Aquí</span></a>
+                            </li>
+                            <li><a id="search" href="javascript:void(0)"><i class="ti-search"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input name="t1" placeholder="Buscar Texto" type="text" class="form-control" /> <input
+                        onclick="busca(document.all.t1.value)" class="genric-btn danger-border radius" type="button"
+                        value="Buscar" />
+                    <span class="ti-close" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+
+    <!--================Hero Banner Area Start =================-->
+    <span class="ir-arriba icon-circle-up"></span>
+    
+    <section class="hero-banner hero-banner-sm">
+        <div class="container text-center">
+            <h2>Nuestros Servicios</h2>
+        </div>
+    </section>
+    
+    <section class="hero-banner hero-banner-sm">
+        <div class="whole-wrap">
+            <div class="container">                   
+             
+              <div class="section-top-border">
+                <h3 class="mb-30 title_color">Los lugares a donde llegamos. <br><br>      
+                     
+                    Fecha de (01-12-2019) al (2-01-2020)</h3>
+                <div class="progress-table-wrap">
+                  <div class="progress-table">
+                    <div class="table-head">
+                      <div class="serial">#</div>
+                      <div class="country">Ciudades</div>
+                      <div class="visit">Visitas</div>
+                      <div class="percentage">Porcentajes de Compras</div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">01</div>
+                      <div class="country"> <img src="img/elements/f1.jpg" alt="flag">Villa Maria del Triunfo</div>
+                      <div class="visit">10254</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-1" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">02</div>
+                      <div class="country"> <img src="img/elements/f2.jpg" alt="flag">Villa el Salvador</div>
+                      <div class="visit">4874</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-2" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">03</div>
+                      <div class="country"> <img src="img/elements/f3.jpg" alt="flag">Santiago de Surco</div>
+                      <div class="visit">7154</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-3" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">04</div>
+                      <div class="country"> <img src="img/elements/f4.jpg" alt="flag">Miraflores</div>
+                      <div class="visit">8004</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-4" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">05</div>
+                      <div class="country"> <img src="img/elements/f5.jpg" alt="flag">San Juan de Miraflores</div>
+                      <div class="visit">6001</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-5" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">06</div>
+                      <div class="country"> <img src="img/elements/f6.jpg" alt="flag">La Molina</div>
+                      <div class="visit">9878</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-6" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">07</div>
+                      <div class="country"> <img src="img/elements/f7.jpg" alt="flag">San Borga</div>
+                      <div class="visit">5000</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-7" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="serial">08</div>
+                      <div class="country"> <img src="img/elements/f8.jpg" alt="flag">San Isidro</div>
+                      <div class="visit">8059</div>
+                      <div class="percentage">
+                        <div class="progress">
+                          <div class="progress-bar color-8" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-top-border">
+                <h3 class="title_color">Nuestros Polos.</h3>
+                <div class="row gallery-item">
+                  <div class="col-md-4">
+                    <a href="img/elements/g1.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g1.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="img/elements/g2.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g2.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="img/elements/g3.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g3.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="img/elements/g4.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g4.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="img/elements/g5.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g5.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="img/elements/g6.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g6.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="img/elements/g7.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g7.jpg);"></div></a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="img/elements/g8.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g8.jpg);"></div></a>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </section>
+    <!--================Hero Banner Area End =================-->
+
+
+    <!--================Service  Area =================-->
+    <section class="service-area area-padding" id="hacemos">
+        <div class="container">
+            <div class="area-heading">
+                <h3 class="line">Lo que proporcionamos</h3>
+                <p>Eres tu mismo.</p>
+
+            </div>
+            <div class="row">
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="img/img/diseño.jpg" alt="">
+
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Diseño personalizado</h5>
+                            <p>Podrás escoger tus polos a tu preferencia, con diseño que te agraden. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="img/img/modelo.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Modelos de polos a tu gusto</h5>
+                            <p>También proporcionamos modelos que te gusten. Desde el modelo mas común y el más raro.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="img/img/colores.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Colores que te encantan</h5>
+                            <p>Podrás combinar los colores que te gusten, los que amas que no te impidan que escoger.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="img/img/limitaciones.jpeg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Sin limitaciones de gustos</h5>
+                            <p>Tus modelos, colores y diseños no sean tu límite.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--================Service Area end =================-->
+
+
+    <!--================ Start Portfolio Area =================-->
+    <section class="portfolio_area area-padding" id="portfolio">
+        <div class="container">
+            <div class="area-heading">
+                <h3 class="line">Our Recent Project</h3>
+                <p>Together female let signs for for fish fowl may first.</p>
+
+            </div>
+
+            <div class="filters portfolio-filter">
+                <ul>
+                    <li class="active" data-filter="*">all</li>
+                    <li data-filter=".popular">buildings</li>
+                    <li data-filter=".latest"> offices</li>
+                    <li data-filter=".following">rebuild</li>
+                    <li data-filter=".upcoming">architecture</li>
+                </ul>
+            </div>
+
+            <div class="filters-content">
+                <div class="row portfolio-grid">
+                    <div class="grid-sizer col-md-3 col-lg-6"></div>
+                    <div class="col-lg-6 col-md-6 all following">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="img/project/1.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 all latest popular upcoming">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="img/project/2.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 all latest following">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="img/project/3.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 all latest upcoming">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="img/project/4.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!--================ End Testimonial Area =================-->
+
+    <!--================ End Testimonial Area =================-->
+    <!--================ start footer Area =================-->
+    <footer class="footer-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget">
+                        <h6>Enlaces de usuario</h6>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="footer-nav">
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="../index.html">Inicio</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="contact.html">Sobre Nosotros</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="#servicio">Nuestros Servicios</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="footer-nav">
+
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="../terminos/index.html">Terminos y Condiciones</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="../Sony/vista/index.php">Tienda</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="contact.html">Contáctenos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Horas de trabajo</h6>
+                        <ul class="business-hour">
+                            <li>Lunes a Viernes : <span>9:00 am - 18:00 pm</span> </li>
+                            <li>Sabados :<span>9:00 am - 16:00 pm</span></li>
+                            <li>Domingos :<span>Cerrádo</span></li>
+                        </ul>
+                        <p>¡Trabajamos todas las vacaciones!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6>Boletín electrónico</h6>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+
+                                <div class="form-group row no-gutters">
+                                    <div class="col-lg-8 col-md-8 col-7">
+                                        <input name="EMAIL" placeholder="Tu correo electrónico"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tu correo electrónico '" required=""
+                                            type="email">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-5">
+                                        <button class="nw-btn main_btn circle">SUSCRÍBETE
+                                            <span class="lnr lnr-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <br><br>
+                        <p> Regístrese para recibir nuevos contenidos,
+                            actualizaciones, encuestas y ofertas de
+                            Happy Shirt.</p>
+                        <a class="footer-link" href="politicas.html">Política de privacidad</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row ">
+                    <p class="col-lg-12 footer-text ">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Happy
+                        Shirt
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--================ End footer Area =================-->
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/arriba.js"></script>   
+    <script src="js/barra.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

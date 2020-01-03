@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/img/favicon-16x16.png" type="image/png">
+    <title>Happy Shirt | Sobre Nosotros</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/arriba.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/mburakerman/prognroll/master/src/prognroll.js"></script>
+    <script>
+        function vermas(id) {
+            if (id == "mas") {
+                document.getElementById("desplegar").style.display = "block";
+                document.getElementById("mas").style.display = "none";
+            }
+            else {
+                document.getElementById("desplegar").style.display = "none";
+                document.getElementById("mas").style.display = "inline";
+            }
+        }
+    </script>
+    <script language="JavaScript">
+        var TRange = null
+
+        function busca(str) {
+            if (parseInt(navigator.appVersion) < 4) return;
+            var strFound;
+            if (window.find) {
+
+                strFound = self.find(str);
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                if (TRange != null) {
+                    TRange.collapse(false)
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+                if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange()
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+            }
+            else if (navigator.appName == "Opera") {
+                alert("Opera no soporta busqueda")
+                return;
+            }
+            if (!strFound) alert("La palabra  '" + str + "' no fue Encontrada")
+            return;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area" id="header">
+        <div class="top_menu row m0">
+            <div class="container">
+                <div class="float-left">
+                    <a class="dn_btn" href="tel: +51944028451"><i class="ti-mobile"></i>944 028 451</a>
+                    <span class="dn_btn"> <i class="ti-location-pin"></i>Av. Tomas Marzano, Santiago de Surco</span>
+                </div>
+                <div class="float-right">
+                    <span class="follow_us">Siguenos: </span>
+                    <ul class="list header_social">
+                        <li><a href="#"><i class="ti-facebook"></i></a></li>
+                        <li><a href="#"><i class="ti-instagram"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="../index.html"><img src="img/img/logo.jpg"" alt=""></a>
+                    <button class=" navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="../index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about-us.html">Sobre Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../Sony/vista/index.php">Nuestros
+                                        Productos</a></li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Blog</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog
+                                                Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contáctenos</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-button">
+                            <ul>
+                                <li class="shop-icon"><a href="../Sony/vista/index.php"><i class="ti-shopping-cart-full"></i><span>Aquí</span></a>
+                                </li>
+                                <li><a id="search" href="javascript:void(0)"><i class="ti-search"></i></a></li>
+                            </ul>
+    
+                        </div>
+
+                </div>
+            </nav>
+
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input name="t1" placeholder="Buscar Texto" type="text" class="form-control" /> <input
+                        onclick="busca(document.all.t1.value)" class="genric-btn danger-border radius" type="button"
+                        value="Buscar" />
+                    <span class="ti-close" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+
+    <!--================Hero Banner Area Start =================-->
+    <section class="hero-banner hero-banner-sm">
+        <div class="container text-center">
+            <h2>Sobre Nosotros</h2>
+            <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="../Sony/vista/index.php">Nuestros Productos</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <!--================Hero Banner Area End =================-->
+
+
+    <!--================About  Area =================-->
+    <span class="ir-arriba icon-circle-up"></span>
+    <section class="about-area area-padding" id="sobre">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="about-img">
+                        <img src="img/banner/about1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h4>TRABAJANDO PARA <br>
+                            USTEDES
+                            DESDE 2019.</h4>
+                        <p>Nuestro objetivo como empresa, es llegar a todo el público posible es hacer que las personas
+                            puedan elegir y personalizar el polo que deseen, haciendo así que las personas omitan la
+                            opción de recorrer metros tras metros en busca de un polo a su preferencia y precio.
+                            Es por ello que nuestro objetivo principal es satisfacer las necesidades de nuestros
+                            clientes atrayendo su atención en nosotros como principal recurso, también nuestros clientes
+                            podrán acomodar y comparar los precios que guste.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="whole-wrap">
+        <div class="container">
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">¿Qué Somos</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single-defination">
+                            <h4 class="mb-20">Propósito</h4>
+                            <p>Inspirar y nutrir el espíritu humano: una persona,
+                                su creatividad y una comunidad a la vez.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-defination">
+                            <h4 class="mb-20">Misión</h4>
+                            <p>Otorgar un servicio de calidad en el cual nuestros
+                                clientes podrán reflejar su personalidad y plasmarlo de la forma en la que quieran.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-defination">
+                            <h4 class="mb-20">Visión</h4>
+                            <p>Ser reconocidos a nivel nacional y siempre apuntando al mercado
+                                internacional, ser altamente recomendable por nuestros clientes y
+                                cumplir con sus expectativas todo el tiempo que lo requieran.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">Descripción</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <blockquote class="generic-blockquote">
+                            HappyShirt es una empresa creada por usuarios y para usuarios, somos conscientes de lo
+                            importante que es optimizar nuestro tiempo al realizar determinadas actividades, por ello
+                            ofrecemos un servicio que permite despegar la creatividad de nuestros clientes con las
+                            nuevas herramientas que les ofrecemos.
+                            Este negocio se encarga de tomar pedidos hechos por los clientes para poder hacer o realizar
+                            un diseño para un polo o camiseta personalizada.
+                            Brindamos servicio sin limitación de estilos al menor y por mayor.
+                            Los usuarios tendrán que crearse un perfil dentro de la plataforma para poder solicitar un
+                            pedido y establecer un presupuesto
+                            Dentro nuestra página mostraremos los modelos más originales, de igual manera mostraremos
+                            información de contacto y de nuestra forma de distribución.
+                            Perfil de ayuda a usuario, que se encargara de tomar consulta y/o reclamos de los clientes
+                            en base a sus pedidos realizado o si quieren realizar más pedidos.
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">Objetivos</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <blockquote class="generic-blockquote">
+                            Nuestro objetivo como empresa, es llegar a todo el público posible es hacer que las personas puedan elegir y personalizar el polo que deseen, haciendo así que las personas omitan la opción de recorrer metros tras metros en busca de un polo a su preferencia y precio.
+                            Es por ello que nuestro objetivo principal es satisfacer las necesidades de nuestros clientes atrayendo su atención en nosotros como principal recurso, también nuestros clientes podrán acomodar y comparar los precios que guste.
+                            Nuestro servicio tendrá un tiempo de disponibilidad de preparación y envió dependiendo del diseño que se requiera, el cliente tendrá a su disposición la información de su pedido. El tiempo de creación y el tiempo de envió tienen un tiempo estimado de acuerdo a los envíos ya programados sin embargo en nuestros métodos de entrega se priorizarán los de pago adicional.
+                           <br> <br>-	Proponer nuevas ideas a nuestros clientes acerca de sus polos
+                            <br>-	Especificar las categorías y precios sobre nuestro catálogo disponible
+                            <br> -	Llevar a cabo una estadística sobre los modelos y colores que compren nuestros clientes
+                            <br> -	Optar por una atención moderada a nuestros clientes y futuros clientes.
+                            <br>-	Llegar a todos los bolsillos de nuestros clientes posibles
+                            <br> -	Catálogo de la empresa con diseños especiales
+                            <br>-	La información de los pedidos será enviada a los respectivos correos
+                            
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================About Area End =================-->
+
+
+    <!--================ start footer Area =================-->
+
+    <footer class="footer-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget">
+                        <h6>Enlaces de usuario</h6>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="footer-nav">
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="../index.html">Inicio</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="#sobre">Sobre Nosotros</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="service.html">Nuestros Servicios</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="footer-nav">
+
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="../terminos/index.html">Terminos y Condiciones</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="../Sony/vista/index.php">Tienda</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="contact.html">Contáctenos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Horas de trabajo</h6>
+                        <ul class="business-hour">
+                            <li>Lunes a Viernes : <span>9:00 am - 18:00 pm</span> </li>
+                            <li>Sabados :<span>9:00 am - 16:00 pm</span></li>
+                            <li>Domingos :<span>Cerrádo</span></li>
+                        </ul>
+                        <p>¡Trabajamos todas las vacaciones!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6>Boletín electrónico</h6>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+
+                                <div class="form-group row no-gutters">
+                                    <div class="col-lg-8 col-md-8 col-7">
+                                        <input name="EMAIL" placeholder="Tu correo electrónico"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tu correo electrónico '" required=""
+                                            type="email">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-5">
+                                        <button class="nw-btn main_btn circle">SUSCRÍBETE
+                                            <span class="lnr lnr-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <br><br>
+                        <p> Regístrese para recibir nuevos contenidos,
+                            actualizaciones, encuestas y ofertas de
+                            Happy Shirt.</p>
+                        <a class="footer-link" href="politicas.html">Política de privacidad</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row ">
+                    <p class="col-lg-12 footer-text ">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Happy
+                        Shirt
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--================ End footer Area =================-->
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/arriba.js"></script>
+    <script src="js/barra.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

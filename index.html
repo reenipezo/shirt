@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Happy Shirt - Compra Online polos, camisetas, tu estilos, tus colores, 
+    y productos exclusivos de HappyShirt. Envíos a todo el Perú.. ">
+    <meta name="keywords" content="" />
+    <link rel="icon" href="vistas/img/img/favicon-16x16.png" type="image/png">
+    <title>Happy Shirt</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vistas/css/bootstrap.css">
+    <link rel="stylesheet" href="vistas/css/themify-icons.css">
+    <link rel="stylesheet" href="vistas/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vistas/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vistas/vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="vistas/css/style.css">
+    <link rel="stylesheet" href="vistas/css/responsive.css">
+
+    <link rel="stylesheet" href="vistas/css/arriba.css">
+    <link rel="stylesheet" href="vistas/css/fonts.css">
+
+    <link rel="stylesheet" href="vistas/css/fonts2.css">
+    <link rel="stylesheet" href="vistas/css/modal.css">
+    <link rel="stylesheet" href="vistas/css/chat.css">
+
+    <!--Cookies prueba 1 star-->
+    <!--<link rel="stylesheet" href="vistas/css/cookies.css">-->
+    <!--Cookies prueba 1 end-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/mburakerman/prognroll/master/src/prognroll.js"></script>
+
+    <style>
+        .city {
+            display: none
+        }
+    </style>
+
+
+    <!-- Cookies star-->
+    <script id="cookieWarn" type="text/javascript" src="vistas/js/cookie-warn.js" data-lang-en="{
+         'text':'Nuestro sitio web utiliza cookies.',
+         'accept_text': 'Acepto',
+         'more_text': 'Esta web utiliza cookies para obtener datos estadísticos de la navegación de sus usuarios. Click aquí para más información',
+         'more_link': 'vistas/politicas.html',
+         'reject_text': 'Rechazo',
+         'reject_info': 'Puede deshabilitar las cookies no deseadas mediante el uso de este programa.',
+         'reject_link': 'https://www.ghostery.com/'
+        }" data-debug="true" data-expire="90" data-path="/projects/cookie-warn/demo" data-delay="220"
+        data-class="myCookieWarningClass"
+        data-style="#cookieWarnBox a { color: lightblue } #cookieWarnBox .btn { border-radius: 5px }"
+        data-callback="cookieWarnCallback">
+        </script>
+    <style>
+        .myCookieWarningClass {
+            box-shadow: 0px 0px 10px 1px #101010;
+            border-radius: 5px;
+            border: 1px solid #a1a1a1;
+            margin: 30px;
+        }
+    </style>
+    <!-- Cookies end-->
+
+    <!-- BUSCAR LETRAS -->
+    <script language="JavaScript">
+        var TRange = null
+
+        function busca(str) {
+            if (parseInt(navigator.appVersion) < 4) return;
+            var strFound;
+            if (window.find) {
+
+                strFound = self.find(str);
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                if (TRange != null) {
+                    TRange.collapse(false)
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+                if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange()
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+            }
+            else if (navigator.appName == "Opera") {
+                alert("Opera no soporta busqueda")
+                return;
+            }
+            if (!strFound) alert("La palabra  '" + str + "' no fue Encontrada")
+            return;
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <!-- Modal PRODUCTOS -->
+    <div class="modal fade in" id="myModal" role="dialog" style="display: block; padding-right: 17px;">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">X</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <h1>Productos en Oferta</h1>
+                    <img src="vistas/img/img/fondo.jpg" />
+                    <a href="Sony/vista/index.php">Ver Productos</a>
+                </div>
+                <div class="col-lg-4  col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6></h6>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+
+                                <div class="form-group row no-gutters">
+                                    <div class="col-lg-8 col-md-8 col-7">
+                                        <input name="EMAIL" placeholder="Tu correo electrónico"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tu correo electrónico '" required=""
+                                            type="email">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-5">
+                                        <button class="nw-btn main_btn circle">SUSCRÍBETE
+                                            <span class="lnr lnr-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <br><br>
+                        <a class="footer-link" href="vistas/politicas.html">Política de privacidad</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button class="btn btn-warning" data-dismiss="modal" type="button">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--================Cookies Menu=================
+    <div id="overbox3">
+        <div id="infobox3">
+            <p>Esta web utiliza cookies para obtener datos estadísticos de la navegación de sus usuarios. Si continúas navegando consideramos que aceptas su uso.
+            <a href="politicas.html">Más información</a>
+            <a onclick="aceptar_cookies();" style="cursor:pointer;">X Cerrar</a></p>
+        </div>
+    </div>
+    -->
+    <!--================Header Menu Area =================-->
+    <header class="header_area" id="header">
+        <div class="top_menu row m0">
+            <div class="container">
+                <div class="float-left">
+                    <a class="dn_btn" href="tel: +51 944028451"><i class="ti-mobile"></i>944 028 451</a>
+                    <a href="vistas/contact.html"> <span class="dn_btn"> <i class="ti-location-pin"></i>Av. Tomas
+                            Marzano, Santiago de Surco</span></a>
+                </div>
+                <div class="float-right">
+                    <a class="dn_btn" onclick="document.getElementById('id01').style.display='block'"><i
+                            class="icon2-bubbles3"></i>Chatea</a>
+                    <!--<a class="dn_btn" onclick="document.getElementById('id02').style.display='block'"><i
+                            class="icon2-bubbles3"></i>Chat General</a> -->
+
+                </div>
+            </div>
+        </div>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                <header class="w3-container w3-blue">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                    <h1>Chatea con Nosotros</h1>
+                </header>
+
+                <main class="page__main">
+                    <div class="block--background">
+                        <div class="chatbot__overview">
+                            <ul class="chatlist">
+                                <li class="bot__output bot__output--standard">Hey, Soy Cielo</li>
+                                <li class="bot__output bot__output--standard">¡Te guiaré a través de nuestra pagina!
+                                </li>
+                                <li class="bot__output bot__output--standard">
+                                    <span class="bot__output--second-sentence">¡Puedes preguntarme un montón de
+                                        cosas!</span>
+                                    <ul>
+                                        <li class="input__nested-list">Alguna cosa <span class="bot__command">
+                                                sobre</span> Happy Shirt</li>
+                                        <li class="input__nested-list">Happy Shirt' <span class="bot__command"> la mejor
+                                                página de ventas</span></li>
+                                        <li class="input__nested-list">Tal vez podría <span class="bot__command">
+                                                ayudar</span> (para más instrucciones)</li>
+                                        <li class="input__nested-list">Escribe <span
+                                                class="bot__command">comandos</span>para obtener una lista de cada
+                                            comando</li>
+                                    </ul>
+                                    También puede desplazarse hacia abajo para ver la cartera completa de Happy Shirt
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chatbox-area">
+                            <form action="" id="chatform">
+                                <textarea placeholder="¡Háblame!" class="chatbox" name="chatbox" resize: "none"
+                                    minlength="2"></textarea>
+                                <input class="submit-button" type="submit" value="Enviar">
+                            </form>
+                        </div>
+                        <div class="block--background"></div>
+
+                </main>
+
+                <div class="w3-container w3-light-grey w3-padding">
+                    <button class="w3-button w3-right w3-white w3-border"
+                        onclick="document.getElementById('id01').style.display='none'">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="./index.html"><img src="vistas/img/img/logo.jpg" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="./index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="vistas/about-us.html">Sobre Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="vistas/service.html">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Sony/vista/index.php">Nuestros Productos</a>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="vistas/blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="vistas/single-blog.html">Blog
+                                            Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="vistas/contact.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-button">
+                        <ul>
+                            <li class="shop-icon"><a href="Sony/vista/productos.php"><i
+                                        class="ti-shopping-cart-full"></i><span>Aquí</span></a>
+                            </li>
+                            <li><a id="search" href="javascript:void(0)"><i class="ti-search"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input name="t1" placeholder="Buscar Texto" type="text" class="form-control" /> <input
+                        onclick="busca(document.all.t1.value)" class="genric-btn danger-border radius" type="button"
+                        value="Buscar" />
+                    <span class="ti-close" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <!--SCROLL UP-->
+    <span class="ir-arriba icon-circle-up"></span>
+    <!--SCROLL UP-->
+    <section class="home_banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+                data-background=""></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <span>Creatividad única</span>
+                    <h3>No dejes que nadie te dija que
+                        <br />escoger con HappyShirt tu mismo eres.</h3>
+
+
+                    <a class="main_btn" href="Sony/vista/index.php">¡Házlo ahora!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+
+    <!--================About  Area =================-->
+    <section class="about-area area-padding" id="sobre">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="about-img">
+                        <img src="vistas/img/img/img1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h4>EMPRESA NUMERO 1°<br>
+                            EN PERSONALIZAR<br>
+                            TUS POLOS DESDE 2019.</h4>
+                        <p>En diciembre de 2019 un grupo de jóvenes como tú se trazó una meta:
+                            Ayudar a las personas a encontrar su propósito de vida.
+                            Al ver que cada persona tenía un propósito de vida
+                            distinto, decidimos enfocarnos en la creatividad porque
+                            ésta es un medio que nos permite conseguir nuestros propósitos.
+                            Así fue que la misión de HappyShirt se convirtió desde entonces
+                            en: «Promover la creatividad de las personas». En un inicio la
+                            marca HappyShirt llevaría en sus gráficas mensajes que motivaran
+                            a las personas a ser más creativas, sin embargo, en el camino
+                            nos dimos cuenta de que empoderando a las personas para que
+                            ellas mismas hagan los diseños sería una mejor manera de promover su creatividad. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================About Area End =================-->
+
+    <!--================Service  Area =================-->
+    <section class="service-area area-padding" id="hacemos">
+        <div class="container">
+            <div class="area-heading">
+                <h3 class="line">Lo que proporcionamos</h3>
+                <p>Eres tu mismo.</p>
+
+            </div>
+            <div class="row">
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="vistas/img/img/diseño.jpg" alt="">
+
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Diseño personalizado</h5>
+                            <p>Podrás escoger tus polos a tu preferencia, con diseño que te agraden. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="vistas/img/img/modelo.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Modelos de polos a tu gusto</h5>
+                            <p>También proporcionamos modelos que te gusten. Desde el modelo mas común y el más raro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="vistas/img/img/colores.jpg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Colores que te encantan</h5>
+                            <p>Podrás combinar los colores que te gusten, los que amas que no te impidan que escoger.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single service -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <img src="vistas/img/img/limitaciones.jpeg" alt="">
+                        </div>
+                        <div class="service-content">
+                            <br><br>
+                            <h5>Sin limitaciones de gustos</h5>
+                            <p>Tus modelos, colores y diseños no sean tu límite.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--================Service Area end =================-->
+
+    <!--================Funny number  Area =================-->
+    <section class="number-area" id="number-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 col-lg-5">
+                    <div class="number-img">
+                        <img src="vistas/img/img/polos2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-6">
+                    <div class="number-content">
+                        <h4>BRINDANDO UN SERVICIO<br>
+                            PERSONALIZADO Y DE ALTA CALIDAD .</h4>
+                        <p>Nuestro servicio tendrá un tiempo de disponibilidad de preparación y envió dependiendo del
+                            diseño que se requiera, el cliente tendrá a su disposición la información de su pedido. El
+                            tiempo de creación y el tiempo de envió tienen un tiempo estimado de acuerdo a los envíos ya
+                            programados sin embargo en nuestros métodos de entrega se priorizarán los de pago adicional.
+                        </p>
+
+                        <div class="number-wrapper">
+                            <div class="single-number">
+                                <h5><span class="counter">45</span>K+</h5>
+                                <p>Cliente feliz</p>
+                            </div>
+                            <div class="single-number">
+                                <h5><span class="counter">50</span>K+</h5>
+                                <p>Polos hechos</p>
+                            </div>
+                            <div class="single-number">
+                                <h5><span class="counter">9</span>/<span class="counter">10</span></h5>
+                                <p>Puntuación media</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Funny number Area end =================-->
+
+
+
+    <!--================ Start Portfolio Area =================-->
+    <section class="portfolio_area area-padding" id="portfolio">
+        <div class="container">
+            <div class="area-heading">
+                <h3 class="line">Polos ya personalizados</h3>
+                <p>Quizas estos polos te atraigan.</p>
+
+            </div>
+
+            <div class="filters portfolio-filter">
+                <ul>
+                    <li class="active" data-filter="*">TODOS</li>
+                    <li data-filter=".popular">POLOS MV</li>
+                    <li data-filter=".latest"> POLOS MO</li>
+                    <li data-filter=".following">POLOS MA</li>
+                    <li data-filter=".upcoming">DISEÑOS POPULARES</li>
+                </ul>
+            </div>
+
+            <div class="filters-content">
+                <div class="row portfolio-grid">
+                    <div class="grid-sizer col-md-3 col-lg-6"></div>
+                    <div class="col-lg-6 col-md-6 all following">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="vistas/img/project/1.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 all latest popular upcoming">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="vistas/img/project/2.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 all latest following">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="vistas/img/project/3.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 all latest upcoming">
+                        <div class="single_portfolio">
+                            <img class="img-fluid w-100" src="vistas/img/project/4.jpg" alt="">
+                            <div class="short_info">
+                                <p>construction</p>
+                                <h4><a href="portfolio-details.html">Desert Work, Dubai</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Area =================-->
+
+
+    <!--================ Start Testimonial Area =================-->
+    <section class="testimonial-area area-padding" id="opiniones">
+        <div class="container">
+            <div class="area-heading">
+                <h3 class="line">Opiniones de los usuarios</h3>
+                <p>Crecemos cada dia mas gracias a ti.</p>
+
+            </div>
+            <div class="row">
+                <div class="active-testimonial-carusel owl-carousel">
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/elements/tes1.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <h4>Julio Estrada</h4>
+                            <p class="designation">Clientes Principales</p>
+                            <p>
+                                El servicio muy bueno, la atención muy comprensiva. Sobre todo me da gusto poder
+                                escoger mis diseños me encanto.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/elements/tex2.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <h4>Maria Barrio</h4>
+                            <p class="designation">Clientes Principales</p>
+                            <p>
+                                Muy bueno todo, me satisface esta tienda Online, recomendare a mis
+                                amistades y familiares muy buen servicio.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/elements/tes1.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <h4>Nicolas De las Casas</h4>
+                            <p class="designation">Clientes Principales</p>
+                            <p>
+                                Muy buen servicio.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/elements/tex2.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <h4>Joel Gonzales</h4>
+                            <p class="designation">Clientes Principales</p>
+                            <p>
+                                Un servicio de Calidad, la atencion muy buena.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/elements/tes1.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <h4>Belén Ferrer</h4>
+                            <p class="designation">Clientes Principales</p>
+                            <p>
+                                Nunca imagine poder escoger mis polos que me encantan, muy buen
+                                servicio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Testimonial Area =================-->
+
+
+    <!--================ Start Blog Area =================-->
+    <section class="blog-area area-padding" id="noticias">
+        <div class="container">
+            <div class="area-heading">
+                <h3 class="line">Nuestras noticias recientes</h3>
+                <p>Personaliza tus polos y haste famoso.</p>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="single-blog">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/img/noti1.jpg" alt="">
+                        </div>
+                        <div class="short_details">
+                            <div class="meta-top d-flex">
+
+                                <a><i class="ti-calendar"></i> Nov 25, 2019</a>
+                                <a href="https://www.fcbarcelona.es/es/"><i class="ti-folder"></i> FCBarcenola</a>
+                            </div>
+                            <a class="d-block" href="single-blog.html">
+                                <h4>Por segundo año consecutivo
+                                    fuimos nombrados para elaborar la camiseta del FCBarcenola</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="single-blog">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/img/noti2.jpg" alt="">
+                        </div>
+                        <div class="short_details">
+                            <div class="meta-top d-flex">
+                                <a href="#"><i class="ti-calendar"></i> Dic 14, 2019</a>
+                                <a href="http://www.somosperu.pe/"><i class="ti-folder"></i> Somos Perú</a>
+                            </div>
+                            <a class="d-block" href="single-blog.html">
+                                <h4>Aceptamos proponernos a
+                                    elaborar camisetas de partidos políticos.</h4>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="single-blog">
+                        <div class="thumb">
+                            <img class="img-fluid" src="vistas/img/img/noti3.jpg" alt="">
+                        </div>
+                        <div class="short_details">
+                            <div class="meta-top d-flex">
+                                <a><i class="ti-calendar"></i> Feb 14, 2019</a>
+                                <a><i class="ti-folder"></i>Panamericanos Lima 2019</a>
+                            </div>
+                            <a class="d-block" href="single-blog.html">
+                                <h4>HappyShirt se propuso un reto y
+                                    lo cumplimos a un 100%, Gracias Lima</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Blog Area =================-->
+
+    <!--================ start footer Area =================-->
+
+    <footer class="footer-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget">
+                        <h6>Enlaces de usuario</h6>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="footer-nav">
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="#header">Inicio</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="#sobre">Sobre Nosotros</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="#opiniones">Opiniones</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="#noticias">Noticias</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="footer-nav">
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="./vistas/service.html">Nuestros Servicios</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="terminos/index.html">Terminos y Condiciones</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="Sony/vista/index.php">Tienda</a>
+                                    </li>
+                                    <li><i class="ti-angle-right"></i>
+                                        <a href="./vistas/contact.html">Contáctenos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Horas de trabajo</h6>
+                        <ul class="business-hour">
+                            <li>Lunes a Viernes : <span>9:00 am - 18:00 pm</span> </li>
+                            <li>Sabados :<span>9:00 am - 16:00 pm</span></li>
+                            <li>Domingos :<span>Cerrádo</span></li>
+                        </ul>
+                        <p>¡Trabajamos todas las vacaciones!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6>Boletín electrónico</h6>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+
+                                <div class="form-group row no-gutters">
+                                    <div class="col-lg-8 col-md-8 col-7">
+                                        <input name="EMAIL" placeholder="Tu correo electrónico"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tu correo electrónico '" required=""
+                                            type="email">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-5">
+                                        <button class="nw-btn main_btn circle">SUSCRÍBETE
+                                            <span class="lnr lnr-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <br><br>
+                        <p> Regístrese para recibir nuevos contenidos,
+                            actualizaciones, encuestas y ofertas de
+                            Happy Shirt.</p>
+                        <a class="footer-link" href="vistas/politicas.html">Política de privacidad</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row ">
+                    <p class="col-lg-12 footer-text ">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Happy
+                        Shirt
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--================ End footer Area =================-->
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#myModal").modal();
+        });
+    </script>
+    <script>
+        document.getElementsByClassName("tablink")[0].click();
+
+        function openCity(evt, cityName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].classList.remove("w3-light-grey");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.classList.add("w3-light-grey");
+        }
+    </script>
+    <script src="vistas/js/chat.js"></script>
+    <script src="vistas/js/cookies.js"></script>
+    <script src="vistas/js/arriba.js"></script>
+    <script src="vistas/js/barra.js"></script>
+    <script src="vistas/js/jquery-2.2.4.min.js"></script>
+    <script src="vistas/js/popper.js"></script>
+    <script src="vistas/js/bootstrap.min.js"></script>
+    <script src="vistas/js/stellar.js"></script>
+    <script src="vistas/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vistas/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vistas/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vistas/js/jquery.ajaxchimp.min.js"></script>
+    <script src="vistas/js/jquery.counterup.min.js"></script>
+    <script src="vistas/js/waypoints.min.js"></script>
+    <script src="vistas/js/mail-script.js"></script>
+    <script src="vistas/js/contact.js"></script>
+    <script src="vistas/js/jquery.form.js"></script>
+    <script src="vistas/js/jquery.validate.min.js"></script>
+    <script src="vistas/js/mail-script.js"></script>
+    <script src="vistas/js/theme.js"></script>
+</body>
+
+</html>

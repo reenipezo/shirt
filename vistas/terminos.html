@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/img/favicon-16x16.png" type="image/png">
+    <title>Happy Shirt</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="scss/_predefine.scss">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/mburakerman/prognroll/master/src/prognroll.js"></script>
+    <script>
+        function vermas(id) {
+            if (id == "mas") {
+                document.getElementById("desplegar").style.display = "block";
+                document.getElementById("mas").style.display = "none";
+            }
+            else {
+                document.getElementById("desplegar").style.display = "none";
+                document.getElementById("mas").style.display = "inline";
+            }
+        }
+    </script>
+    <script language="JavaScript">
+        var TRange = null
+
+        function busca(str) {
+            if (parseInt(navigator.appVersion) < 4) return;
+            var strFound;
+            if (window.find) {
+
+                strFound = self.find(str);
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                if (TRange != null) {
+                    TRange.collapse(false)
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+                if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange()
+                    strFound = TRange.findText(str)
+                    if (strFound) TRange.select()
+                }
+            }
+            else if (navigator.appName == "Opera") {
+                alert("Opera no soporta busqueda")
+                return;
+            }
+            if (!strFound) alert("La palabra  ''" + str + "'' no fue Encontrada")
+            return;
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area" id="header">
+        <div class="top_menu row m0">
+            <div class="container">
+                <div class="float-left">
+                    <a class="dn_btn" href="tel: +51 944028451"><i class="ti-mobile"></i>944 028 451</a>
+                    <a href="vistas/contact.html"> <span class="dn_btn"> <i class="ti-location-pin"></i>Av. Tomas
+                            Marzano, Santiago de Surco</span></a>
+                </div>
+                <div class="float-right">
+                    <span class="follow_us">Siguenos: </span>
+                    <ul class="list header_social">
+                        <li><a href="#"><i class="ti-facebook"></i></a></li>
+                        <li><a href="#"><i class="ti-instagram"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="../index.html"><img src="img/img/logo.jpg" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about-us.html">Sobre Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../Sony/vista/index.php">Polos Personalizados</a></li>
+                            <li class="nav-item submenu dropdown"
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-button">
+                        <ul>
+                            <li class="shop-icon"><a href="#"><i class="ti-shopping-cart-full"></i><span>Aquí</span></a>
+                            </li>
+                            <li><a id="search" href="javascript:void(0)"><i class="ti-search"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input name="t1" placeholder="Buscar Texto" type="text" class="form-control" /> <input
+                        onclick="busca(document.all.t1.value)" class="genric-btn danger-border radius" type="button"
+                        value="Buscar" />
+                    <span class="ti-close" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-banner hero-banner-sm" id="termi">
+        <div class="container text-center">
+            <h2>Términos y Condiciones</h2>
+            <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="politicas.html">Políticas y Privacidad</a></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <div class="whole-wrap">
+        <div class="container">
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">Left Aligned</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/elements/d.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9 mt-sm-20 left-align-p">
+                        <p>Recently, the US Federal government banned online casinos from operating in America by making
+                            it illegal to transfer money to them through any US bank or payment system. As a result of
+                            this law, most of the popular online casino networks such as Party Gaming and PlayTech left
+                            the United States. Overnight, online casino players found themselves being chased by the
+                            Federal government. But, after a fortnight, the online casino industry came up with a
+                            solution and new online casinos started taking root. These began to operate under a
+                            different business umbrella, and by doing that, rendered the transfer of money to and from
+                            them legal. A major part of this was enlisting electronic banking systems that would accept
+                            this new clarification and start doing business with me. Listed in this article are the
+                            electronic banking systems that accept players from the United States that wish to play in
+                            online casinos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-top-border text-right">
+                <h3 class="mb-30 title_color">Right Aligned</h3>
+                <div class="row">
+                    <div class="col-md-9">
+                        <p class="text-right">Over time, even the most sophisticated, memory packed computer can begin
+                            to run slow if we don’t do something to prevent it. The reason why has less to do with how
+                            computers are made and how they age and more to do with the way we use them. You see, all of
+                            the daily tasks that we do on our PC from running programs to downloading and deleting
+                            software can make our computer sluggish. To keep this from happening, you need to understand
+                            the reasons why your PC is getting slower and do something to keep your PC running at its
+                            best. You can do this through regular maintenance and PC performance optimization programs
+                        </p>
+                        <p class="text-right">Before we discuss all of the things that could be affecting your PC’s
+                            performance, let’s talk a little about what symptoms</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/elements/d.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">Definition</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single-defination">
+                            <h4 class="mb-20">Definition 01</h4>
+                            <p>Recently, the US Federal government banned online casinos from operating in America by
+                                making it illegal to transfer money to them through any US bank or payment system. As a
+                                result of this law, most of the popular online casino networks</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-defination">
+                            <h4 class="mb-20">Definition 02</h4>
+                            <p>Recently, the US Federal government banned online casinos from operating in America by
+                                making it illegal to transfer money to them through any US bank or payment system. As a
+                                result of this law, most of the popular online casino networks</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-defination">
+                            <h4 class="mb-20">Definition 03</h4>
+                            <p>Recently, the US Federal government banned online casinos from operating in America by
+                                making it illegal to transfer money to them through any US bank or payment system. As a
+                                result of this law, most of the popular online casino networks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">Block Quotes</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <blockquote class="generic-blockquote">
+                            “Recently, the US Federal government banned online casinos from operating in America by
+                            making it illegal to transfer money to them through any US bank or payment system. As a
+                            result of this law, most of the popular online casino networks such as Party Gaming and
+                            PlayTech left the United States. Overnight, online casino players found themselves being
+                            chased by the Federal government. But, after a fortnight, the online casino industry came up
+                            with a solution and new online casinos started taking root. These began to operate under a
+                            different business umbrella, and by doing that, rendered the transfer of money to and from
+                            them legal. A major part of this was enlisting electronic banking systems that would accept
+                            this new clarification and start doing business with me. Listed in this article are the
+                            electronic banking”
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <footer class="footer-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget">
+                        <h6>Enlaces de usuario</h6>
+                        <div class="row">
+                                <div class="col-lg-6">
+                                    <ul class="footer-nav">
+                                        <li><i class="ti-angle-right"></i>
+                                            <a href="../index.html">Inicio</a>
+                                        </li>
+                                        <li><i class="ti-angle-right"></i>
+                                            <a href="about-us.html">Sobre Nosotros</a>
+                                        </li>
+                                        <li><i class="ti-angle-right"></i>
+                                            <a href="service.html">Nuestros Servicios</a>
+                                        </li>
+                                    </ul>
+    
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="footer-nav">
+    
+                                        <li><i class="ti-angle-right"></i>
+                                            <a href="#termi">Terminos y Condiciones</a>
+                                        </li>
+                                        <li><i class="ti-angle-right"></i>
+                                            <a href="../Sony/vista/index.php">Tienda</a>
+                                        </li>
+                                        <li><i class="ti-angle-right"></i>
+                                            <a href="contact.html">Contáctenos</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Horas de trabajo</h6>
+                        <ul class="business-hour">
+                            <li>Lunes a Viernes : <span>9:00 am - 18:00 pm</span> </li>
+                            <li>Sabados :<span>9:00 am - 16:00 pm</span></li>
+                            <li>Domingos :<span>Cerrádo</span></li>
+                        </ul>
+                        <p>¡Trabajamos todas las vacaciones!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6>Boletín electrónico</h6>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+
+                                <div class="form-group row no-gutters">
+                                    <div class="col-lg-8 col-md-8 col-7">
+                                        <input name="EMAIL" placeholder="Tu correo electrónico"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tu correo electrónico '" required=""
+                                            type="email">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-5">
+                                        <button class="nw-btn main_btn circle">SUSCRÍBETE
+                                            <span class="lnr lnr-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <br><br>
+                        <p> Regístrese para recibir nuevos contenidos,
+                            actualizaciones, encuestas y ofertas de
+                            Happy Shirt.</p>
+                        <a class="footer-link" href="politicas.html">Política de privacidad</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row ">
+                    <p class="col-lg-12 footer-text ">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Happy
+                        Shirt
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--================ End footer Area =================-->
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/barra.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>
